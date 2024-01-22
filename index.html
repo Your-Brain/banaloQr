@@ -1,0 +1,68 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your-qr</title>
+
+    <!-- <link rel="stylesheet" href="brain.css"> -->
+    <link rel="stylesheet" href="brain1.css" />
+</head>
+
+<body>
+    <div id="contener">
+        <div id="main">
+            <div class="conten">
+                <div class="input">
+                    <p id="user_1">hii,user</p>
+
+                    <p class="p">QR_Banalo</p>
+                    <input type="text" placeholder="dal_de_vai" id="text" />
+                    <button onclick="brain()" class="I">bana_dal</button>
+                    <button onclick="toggleRefresh()" class="II">Refresh</button>
+                </div>
+                <div id="imgbox">
+                    <img src="" id="qrimg" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const user = prompt("Your_Name:)") || "Guest";
+        document.getElementById("user_1");
+        user_1.innerHTML = "Hii, " + user;
+        
+        
+        
+        function brain() {
+            let qrimg = document.getElementById("qrimg");
+        let text = document.getElementById("text");
+            qrimg.src =
+                "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" +
+                text.value;
+        }
+        
+
+
+            let isRefreshing = false;
+
+    function toggleRefresh() {
+        if (isRefreshing) {
+            brain();
+            toggleClass()
+
+        } else {
+            location.reload();
+            
+        }
+        isRefreshing = !isRefreshing;
+    }
+
+    </script>
+</body>
+
+</html>

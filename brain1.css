@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#contener{
+    --bg_contener:#1a1a1ad2;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg_contener);
+}
+#main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.conten{
+    position: relative;
+    padding: 19px;
+    
+    width: 30vw;
+    height: 50vh;
+    border-radius: 40px;
+    border: 2px solid #c7c7c75a;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    animation: color 5s infinite;
+   
+    
+    /* flex-direction: column; */
+    
+}
+@keyframes color{
+    0%,100%{
+        box-shadow: rgba(255, 255, 255, 0.845) 0px 0px 28px 7px, rgba(255, 255, 255, 0.727) 0px 0px 0px 0px, rgba(255, 255, 255, 0.553) 0px 0px 0px 1px inset;
+
+    }
+    25%{
+        box-shadow: rgba(255, 255, 255, 0.845) 0px 0px 28px -27px, rgba(255, 255, 255, 0.727) 0px 0px 0px -30px, rgba(255, 255, 255, 0.553) 0px 0px 0px -1px inset;
+
+
+    }
+}
+.p{
+    color: #eee;
+    font-size: 20px;
+
+}
+#user_1{
+    color: #ff0000cc;
+    font-size: 25px;
+
+}
+
+input{
+    text-align: center;
+    
+    outline: 0;
+    /* left: -2.3rem; */
+    color: #eee;
+    background-color: rgba(129, 129, 129, 0.188);
+    border: 2px solid #eeeeee2b;
+    /* display: inline-block; */
+    border-radius:9px ;
+    padding: 6px;
+    
+}
+.input{
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    flex-wrap: wrap;
+
+}
+button{
+    width: 9rem;
+    outline: 0;
+    
+    color: #eee;
+    background-color: rgba(189, 189, 189, 0.413);
+    border: 2px solid #eeeeee2b;
+    
+    border-radius:9px ;
+    padding: 6px;
+    
+}
+button:active{
+    background-color: #eee;
+    color: black;
+    scale: 1.1;
+    box-shadow: rgba(132, 224, 255, 0.553) 0px 0px 28px 2px, rgba(132, 224, 255, 0.553) 0px 0px 0px 0px, rgba(132, 224, 255,0.553) 0px 0px 0px 1px inset;
+    
+}
+@media (max-width: 480px) {
+    .conten{
+        display: flex;
+        min-width: 14rem;
+        min-height: 24rem;
+        margin: 8px;
+        padding: 9px;
+        /* min-height: 30rem; */
+   
+        
+        
+        
+    }
+    
+  }
+  
+
