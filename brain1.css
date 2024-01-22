@@ -108,7 +108,7 @@ button:active{
 @media (max-width: 480px) {
     .conten{
         display: flex;
-        min-width: 18rem;
+        min-width: 24rem;
         min-height: 24rem;
         margin: 8px;
         padding: 9px;
