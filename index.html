@@ -1,68 +1,39 @@
-<!-- @format -->
-
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your-qr</title>
-
-    <!-- <link rel="stylesheet" href="brain.css"> -->
-    <link rel="stylesheet" href="brain1.css" />
-</head>
-
-<body>
-    <div id="contener">
-        <div id="main">
-            <div class="conten">
-                <div class="input">
-                    <p id="user_1">hii,user</p>
-
-                    <p class="p">QR_Banalo</p>
-                    <input type="text" placeholder="dal_de_vai" id="text" />
-                    <button onclick="brain()" class="I">bana_dal</button>
-                    <button onclick="toggleRefresh()" class="II">Refresh</button>
-                </div>
-                <div id="imgbox">
-                    <img src="" id="qrimg" />
-                </div>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <title>Fatty_Qr</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div class="img">
+        <div class="imginner"></div>
+      </div>
+      <div class="wrapper">
+        <div class="box">
+          <div class="box_inner">
+            <p><span class="typing"></span><span>|</span></p>
+            <div class="input">
+              <input type="text" name="" id="text" placeholder="Enter text" />
             </div>
+            <div class="btns">
+              <button class="sub">Generate</button>
+              <button class="re">Rephrase</button>
+            </div>
+          </div>
+          <div class="right"></div>
         </div>
+      </div>
     </div>
-
-    <script>
-        const user = prompt("Your_Name:)") || "Guest";
-        document.getElementById("user_1");
-        user_1.innerHTML = "Hii, " + user;
-        
-        
-        
-        function brain() {
-            let qrimg = document.getElementById("qrimg");
-        let text = document.getElementById("text");
-            qrimg.src =
-                "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" +
-                text.value;
-        }
-        
-
-
-            let isRefreshing = false;
-
-    function toggleRefresh() {
-        if (isRefreshing) {
-            brain();
-            toggleClass()
-
-        } else {
-            location.reload();
-            
-        }
-        isRefreshing = !isRefreshing;
-    }
-
-    </script>
-</body>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js"
+      integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+  </body>
 </html>

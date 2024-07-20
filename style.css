@@ -1,0 +1,197 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: -o-linear-gradient(275deg, #a877e3cc, #6e8ffba2);
+  background: linear-gradient(535deg, #a877e3cc, #6e8ffba2);
+}
+.img {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: -o-linear-gradient(315deg, rgb(0, 0, 0), rgb(255, 255, 255));
+  background: linear-gradient(135deg, rgb(0, 0, 0), rgb(255, 255, 255));
+  display: none;
+}
+.display {
+  display: block;
+}
+
+.imginner {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.box {
+  width: 700px;
+  height: 500px;
+  /* background-color: rgba(255, 255, 255, 0.277); */
+  border-radius: 5px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.box_inner {
+  background: -o-linear-gradient(315deg, #6e8efb, #a777e3);
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  width: 90%;
+  height: 90%;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+.box_inner p {
+  /* color: linear-gradient(135deg, #6e8efb, #a777e3); */
+  font-size: 50px;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.box_inner .input {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.box_inner input {
+  width: 90%;
+  height: 50px;
+  border-radius: 8px;
+  border: 2px solid #5446466c;
+  outline: none;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  background: transparent;
+}
+.box_inner input:focus {
+  border: 2px solid #000000d2;
+}
+.box_inner input::-webkit-input-placeholder {
+  color: rgb(82, 79, 79);
+}
+.box_inner input::-moz-placeholder {
+  color: rgb(82, 79, 79);
+}
+.box_inner input:-ms-input-placeholder {
+  color: rgb(82, 79, 79);
+}
+.box_inner input::-ms-input-placeholder {
+  color: rgb(82, 79, 79);
+}
+.box_inner input::placeholder {
+  color: rgb(82, 79, 79);
+}
+.box_inner .btns {
+  width: 100%;
+  height: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+.box_inner button {
+  width: 200px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  background-color: rgba(0, 0, 255, 0.216);
+  color: white;
+}
+
+.box_inner button:nth-child(1) {
+  background: -o-linear-gradient(315deg, rgba(0, 255, 51, 0.216), #6e8efb);
+  background: linear-gradient(135deg, rgba(0, 255, 51, 0.216), #6e8efb);
+}
+
+.box_inner button:nth-child(2) {
+  background: -o-linear-gradient(315deg, rgba(255, 0, 157, 0.216), #6e8efb);
+  background: linear-gradient(135deg, rgba(255, 0, 157, 0.216), #6e8efb);
+}
+
+@media screen and (max-width: 768px) {
+  .box {
+    width: 90%;
+    height: 90%;
+  }
+
+  .box_inner input {
+    width: 90%;
+  }
+}
