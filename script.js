@@ -13,9 +13,6 @@ const initializeTypedEffect = () => {
   new Typed(".typing", options);
 };
 
-// Initialize the typed effect on page load
-initializeTypedEffect();
-
 // Helper function to select elements
 const selectElement = (selector) => document.querySelector(selector);
 
@@ -26,23 +23,52 @@ const resetButton = selectElement(".re");
 const imageContainer = selectElement(".imginner");
 const displayContainer = selectElement(".img");
 
+// Initialize the typed effect on page load
+document.addEventListener("DOMContentLoaded", initializeTypedEffect);
+
+// Function to generate QR code
+const generateQRCode = () => {
+  if (inputField.value) {
+    let size = "500x500";
+    const windowWidth = window.innerWidth;
+
+    if (windowWidth <= 768) {
+      size = "280x280"; // Adjust size for smaller screens
+    }
+
+    const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=${size}&data=${inputField.value}`;
+    const qrImage = document.createElement("img");
+    qrImage.src = qrCodeUrl;
+
+    displayContainer.classList.add("display");
+    imageContainer.innerHTML = ""; // Clear previous QR code if any
+    imageContainer.appendChild(qrImage);
+  } else {
+    alert("Please enter text");
+  }
+};
+
 // Event listener to reset input and image container
 resetButton.addEventListener("click", () => {
   inputField.value = "";
   imageContainer.innerHTML = "";
+  displayContainer.classList.remove("display");
 });
 
 // Event listener to handle QR code generation
-submitButton.addEventListener("click", (event) => {
-  if (inputField.value) {
-    const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${inputField.value}`;
-    const qrImage = document.createElement("img");
-    qrImage.src = qrCodeUrl;
+submitButton.addEventListener("click", generateQRCode);
 
-    displayContainer.classList.toggle("display");
-    imageContainer.appendChild(qrImage);
-  } else {
-    alert("Please enter text");
+// Handle QR code regeneration on window resize
+window.addEventListener("resize", () => {
+  if (imageContainer.firstChild) {
+    generateQRCode();
+  }
+});
+
+// Enter key to trigger QR code generation
+inputField.addEventListener("keyup", (event) => {
+  if (event.key === "Enter") {
+    submitButton.click();
   }
 });
 
@@ -50,5 +76,5 @@ submitButton.addEventListener("click", (event) => {
 imageContainer.addEventListener("click", () => {
   inputField.value = "";
   imageContainer.innerHTML = "";
-  displayContainer.classList.toggle("display");
+  displayContainer.classList.remove("display");
 });

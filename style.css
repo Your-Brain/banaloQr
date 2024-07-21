@@ -14,8 +14,8 @@
 
 body {
   font-family: sans-serif;
-  background: -o-linear-gradient(275deg, #a877e3cc, #6e8ffba2);
-  background: linear-gradient(535deg, #a877e3cc, #6e8ffba2);
+  background: -o-linear-gradient(275deg, #a877e3cc, #6e8ffbd4);
+  background: linear-gradient(535deg, #a877e3cc, #6e8ffbd4);
 }
 .img {
   position: absolute;
@@ -102,7 +102,7 @@ body {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .box_inner .input {
-  width: 100%;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -111,15 +111,17 @@ body {
           justify-content: center;
 }
 .box_inner input {
-  width: 90%;
+  width: 85%;
   height: 50px;
-  border-radius: 8px;
+  border-radius: 40px;
   border: 2px solid #5446466c;
   outline: none;
   font-size: 20px;
   font-weight: 700;
   text-align: center;
   background: transparent;
+   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.249);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
 }
 .box_inner input:focus {
   border: 2px solid #000000d2;
@@ -158,9 +160,10 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 20px;
+  padding: 0px 10px 0px 10px;
 }
 .box_inner button {
-  width: 200px;
+  width: 180px;
   height: 50px;
   border-radius: 8px;
   border: none;
@@ -190,8 +193,13 @@ body {
     width: 90%;
     height: 90%;
   }
+  .box_inner{
+    height: 80%;
+    padding: 10px;
+  }
 
   .box_inner input {
     width: 90%;
+
   }
 }
